@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+body{
+  background-color: #dbdbdb;
+  overflow: hidden;
+  font-family: Quando;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main{
+  width: 100%;
+  height: 90vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.main_photo {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  transition: .2s ease-in-out;
+}
+
+.main_photo:hover{
+  cursor: pointer;
+  scale: 1.05;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.main_photo:active{
+  scale: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+#main_image { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main_text {
+  position: absolute;
+  font-size: 1.75em;
+  text-wrap: wrap;    
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  column-gap: 0.4em;
+}
+
+.gallery-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+.gallery-container {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallerytext{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   color: white;
+  font-size: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+.gallery-container.show {
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.prev,
+.next,
+.close {
+  position: absolute;
+  top: 50%;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.close {
+  top: 10px;
+  right: 20px;
+}
+
+@media only screen and (max-width: 910px) {
+  .main_text {
+      font-size: 1.25em;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 610px) {
+  .main_text {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+@media only screen and (max-width: 335px) {
+  .main_text {
+      font-size: 1em;
+  }
+}
+@media only screen and (max-width: 265px) {
+  .main_text {
+      font-size: 0.75em;
   }
 }

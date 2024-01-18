@@ -3,7 +3,7 @@ import './App.css';
 function App() {
 
 let currentIndex = 1;
-const totalImages = 29;
+const totalImages = 28;
 const supportedExtensions = ['jpg', 'png', 'gif']; // Add more extensions as needed
 
 document.addEventListener('keydown', function (event) {

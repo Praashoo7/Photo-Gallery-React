@@ -1,3 +1,5 @@
+![alt text](https://github.com/Praashoo7/Photo-Gallery-React/blob/public/images/ReadMe_IMG (1).png?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

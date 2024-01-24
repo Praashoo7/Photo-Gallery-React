@@ -77,6 +77,11 @@ body{
   transition: opacity 0.3s ease-in-out;
 }
 
+#expandedImg{
+    width: auto;
+    border-radius:  15px;
+}
+
 .gallery-container img {
   width: 100%;
   height: 100%;

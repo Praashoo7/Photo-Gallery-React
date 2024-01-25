@@ -1,6 +1,3 @@
-![Readme Image](public/images/ReadMe_Image1.png)
-![Readme Image](public/images/ReadMe_Image2.png)
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

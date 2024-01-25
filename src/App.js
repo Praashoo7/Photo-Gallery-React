@@ -4,7 +4,7 @@ function App() {
 
 let currentIndex = 1;
 const totalImages = 28;
-const supportedExtensions = ['jpg', 'png', 'gif']; // Add more extensions as needed
+const supportedExtensions = ['jpg', 'png', 'gif'];
 
 document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowLeft') {
@@ -89,7 +89,7 @@ function showImage(n, extensions) {
     const displayErrorMessage = function () {
         imgElement.src = process.env.PUBLIC_URL + '/images/Invalid_Image.png';
         gallerytext.style.opacity = 0;
-        //gallerytext.textContent = 'Invalid Image!';
+
         setTimeout(() => {
             galleryContainer.style.opacity = 1;
             errorOccurred = true;

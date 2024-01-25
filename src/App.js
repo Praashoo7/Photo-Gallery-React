@@ -83,11 +83,11 @@ function showImage(n, extensions) {
             loadNextImage(index + 1);
         };
 
-        newImg.src = `./images/${currentIndex}.${extensions[index]}`;
+        newImg.src = process.env.PUBLIC_URL + `/images/${currentIndex}.${extensions[index]}`;
     };
 
     const displayErrorMessage = function () {
-        imgElement.src = './images/Invalid_Image.png';
+        imgElement.src = process.env.PUBLIC_URL + '/images/Invalid_Image.png';
         gallerytext.style.opacity = 0;
         //gallerytext.textContent = 'Invalid Image!';
         setTimeout(() => {
@@ -108,22 +108,22 @@ function changeImage(n) {
 
   return (
     <div>
-      <div class="main">
-        <div class="main_photo" onClick={() => openGallery()}>
-            <img id="main_image" src="./images/1.jpg" />
-            <span class="main_text">
+      <div className="main">
+        <div className="main_photo" onClick={() => openGallery()}>
+            <img id="main_image" src={process.env.PUBLIC_URL + '/images/1.jpg'} />
+            <span className="main_text">
                 <span>Explore</span><span>My</span><span>Photography</span>
             </span>
         </div>
       </div>
 
-      <div class="gallery-overlay" id="galleryOverlay">
-          <div class="gallerytext">Loading..</div>
-          <div class="gallery-container">
+      <div className="gallery-overlay" id="galleryOverlay">
+          <div className="gallerytext">Loading..</div>
+          <div className="gallery-container">
               <img id="expandedImg" />
-              <span class="prev" onClick={() => changeImage(-1)}>&#10094;</span>
-              <span class="next" onClick={() => changeImage(1)}>&#10095;</span>
-              <span class="close" onClick={() => closeGallery()}>&times;</span>
+              <span className="prev" onClick={() => changeImage(-1)}>&#10094;</span>
+              <span className="next" onClick={() => changeImage(1)}>&#10095;</span>
+              <span className="close" onClick={() => closeGallery()}>&times;</span>
           </div>
       </div>
     </div>

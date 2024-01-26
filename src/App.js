@@ -120,8 +120,8 @@ function changeImage(n) {
       <div className="gallery-overlay" id="galleryOverlay">
           <div className="gallerytext">Loading..</div>
           <div className="gallery-container">
-              <img id="expandedImg" />
               <span className="prev" onClick={() => changeImage(-1)}>&#10094;</span>
+              <img id="expandedImg" />
               <span className="next" onClick={() => changeImage(1)}>&#10095;</span>
               <span className="close" onClick={() => closeGallery()}>&times;</span>
           </div>

@@ -72,7 +72,6 @@ body{
   align-items: center;
   height: 80%;
   width: 80%;
-  overflow: hidden;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -110,11 +109,15 @@ body{
 }
 
 .prev {
-  left: 20px;
+  position: relative;
+  top: 55%;
+  left: 0;
 }
 
 .next {
-  right: 20px;
+  position: relative;
+  top: 55%;
+  left: 0;
 }
 
 .close {

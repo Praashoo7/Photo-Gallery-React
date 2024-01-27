@@ -21,10 +21,13 @@ document.addEventListener('keydown', function (event) {
 function openGallery() {
     const galleryOverlay = document.getElementById('galleryOverlay');
     const galleryContainer = document.querySelector('.gallery-container');
+    const main = document.querySelector('.main');
 
     showImage(currentIndex, supportedExtensions);
     galleryContainer.classList.add('show');
     galleryOverlay.style.display = 'flex';
+    main.style.display = 'none';
+
 
     setTimeout(() => {
         galleryContainer.style.opacity = 1;
@@ -34,8 +37,10 @@ function openGallery() {
 function closeGallery() {
     const galleryOverlay = document.getElementById('galleryOverlay');
     const galleryContainer = document.querySelector('.gallery-container');
+    const main = document.querySelector('.main');
 
     galleryContainer.style.opacity = 0;
+    main.style.display = 'flex';
 
     setTimeout(() => {
         galleryOverlay.style.display = 'none';

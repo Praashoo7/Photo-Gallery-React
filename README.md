@@ -5,7 +5,9 @@
 
 ## Setup
 - download or clone the repository
-- run `npm install`
+```sh
+run `npm install`
+```
 - ...
 
 ## Credits

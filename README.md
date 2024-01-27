@@ -4,16 +4,23 @@
 ![Readme Image](public/images/ReadMe_Image2.png)
 
 ## Setup
-- download or clone the repository
+- Clone it!
 ```sh
-run `npm install`
+git clone https://github.com/Praashoo7/Photo-Gallery-React.git
+cd Photo-Gallery-React
 ```
-- ...
+- Install Dependencies :
+```sh
+npm install
+```
+- Start a local Web Server by running :
+```sh
+npm start
+```
 
 ## Credits
-List of contriubutors:
-- [John Doe](johndoe.com)
-- [Beginners guide to BEM](link-goes-here.com)
+
+Favorite Things App is built by [Prashant](https://praashoo7.github.io/Portfolio/)
 
 ## License
 

@@ -21,8 +21,8 @@ npm start
 
 ## Credits
 
-Favorite Things App is built by [Prashant](https://praashoo7.github.io/Portfolio/)
+Photo Gallery React App is built by [Prashant](https://praashoo7.github.io/Portfolio/)
 
 ## License
 
-Favorite Things App is open-source software licensed under the @ [MIT License](https://github.com/Praashoo7/Photo-Gallery-React/blob/main/LICENSE)
+Photo Gallery React App is open-source software licensed under the @ [MIT License](https://github.com/Praashoo7/Photo-Gallery-React/blob/main/LICENSE)

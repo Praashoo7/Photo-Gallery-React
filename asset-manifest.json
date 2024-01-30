@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/%3Chttps://praashoo7.github.io/Photo-Gallery-React%3E/static/css/main.4966a7e5.css",
-    "main.js": "/%3Chttps://praashoo7.github.io/Photo-Gallery-React%3E/static/js/main.afa2e2ba.js",
-    "static/js/787.0c05e198.chunk.js": "/%3Chttps://praashoo7.github.io/Photo-Gallery-React%3E/static/js/787.0c05e198.chunk.js",
-    "index.html": "/%3Chttps://praashoo7.github.io/Photo-Gallery-React%3E/index.html",
-    "main.4966a7e5.css.map": "/%3Chttps://praashoo7.github.io/Photo-Gallery-React%3E/static/css/main.4966a7e5.css.map",
-    "main.afa2e2ba.js.map": "/%3Chttps://praashoo7.github.io/Photo-Gallery-React%3E/static/js/main.afa2e2ba.js.map",
-    "787.0c05e198.chunk.js.map": "/%3Chttps://praashoo7.github.io/Photo-Gallery-React%3E/static/js/787.0c05e198.chunk.js.map"
+    "main.css": "/Photo-Gallery-React/static/css/main.4966a7e5.css",
+    "main.js": "/Photo-Gallery-React/static/js/main.c1f5b87d.js",
+    "static/js/787.0c05e198.chunk.js": "/Photo-Gallery-React/static/js/787.0c05e198.chunk.js",
+    "index.html": "/Photo-Gallery-React/index.html",
+    "main.4966a7e5.css.map": "/Photo-Gallery-React/static/css/main.4966a7e5.css.map",
+    "main.c1f5b87d.js.map": "/Photo-Gallery-React/static/js/main.c1f5b87d.js.map",
+    "787.0c05e198.chunk.js.map": "/Photo-Gallery-React/static/js/787.0c05e198.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4966a7e5.css",
-    "static/js/main.afa2e2ba.js"
+    "static/js/main.c1f5b87d.js"
   ]
 }

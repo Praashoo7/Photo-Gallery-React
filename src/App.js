@@ -115,7 +115,7 @@ function changeImage(n) {
     <div>
       <div className="main">
         <div className="main_photo" onClick={() => openGallery()}>
-            <img id="main_image" src={process.env.PUBLIC_URL + '/images/1.jpg'} />
+            <img id="main_image" alt='main_image' src={process.env.PUBLIC_URL + '/images/1.jpg'} />
             <span className="main_text">
                 <span>Explore</span><span>My</span><span>Photography</span>
             </span>
@@ -126,7 +126,7 @@ function changeImage(n) {
           <div className="gallerytext">Loading..</div>
           <div className="gallery-container">
               <span className="prev" onClick={() => changeImage(-1)}>&#10094;</span>
-              <img id="expandedImg" />
+              <img alt='gallery_image' id="expandedImg" />
               <span className="next" onClick={() => changeImage(1)}>&#10095;</span>
               <span className="close" onClick={() => closeGallery()}>&times;</span>
           </div>

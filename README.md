@@ -1,8 +1,8 @@
 # [Photo Gallery React App](https://praashoo7.github.io/Photo-Gallery-React/)
 
-![Readme Image](public/images/ReadMe_Image1R.png)
+![Readme Image](public/ReadMe_Image1R.png)
 
-![Readme Image](public/images/ReadMe_Image2R.png)
+![Readme Image](public/ReadMe_Image2R.png)
 
 ## Setup
 - Clone it!

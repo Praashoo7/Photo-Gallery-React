@@ -124,7 +124,7 @@ const openGit = () => {
                 <span>Explore</span><span>My</span><span>Photography</span>
             </span>
         </div>
-        <button className='git_star' onClick={openGit}>Star on Github 
+        <button className='git_star' onClick={openGit}>Star on GitHub 
           <svg id='star' aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star mr-1" >
           <defs>
               <filter id="sofGlow" height="300%" width="300%" x="-75%" y="-75%">

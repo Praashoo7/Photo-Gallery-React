@@ -189,14 +189,14 @@ body{
   font-weight: bold;
   color: black;
   background-color: #EAECF0;
-  border: none;
+  border: 1px solid #cccccc;
   outline: none;
   border-radius: 5px;
   transition: .2s ease-in-out;
   cursor: pointer;
 }
 .git_star:hover{
-  opacity: 0.9;
+  opacity: 0.8;
 }
 #star{
   fill: black;

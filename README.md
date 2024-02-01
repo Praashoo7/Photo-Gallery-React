@@ -1,6 +1,6 @@
 # [Photo Gallery React App](https://praashoo7.github.io/Photo-Gallery-React/)
 
-![Readme Image](public/ReadMe_Image1R.png)
+![Readme Image](public/ReadMe_Image11R.png)
 
 ![Readme Image](public/ReadMe_Image2R.png)
 

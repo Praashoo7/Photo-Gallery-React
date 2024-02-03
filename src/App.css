@@ -127,6 +127,40 @@ body{
   right: 20px;
 }
 
+.git_star{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+  font-size: 0.7em;
+  height: 2.5em;
+  text-wrap: nowrap;
+  padding: 0.75em;
+  font-family: Quando;
+  font-weight: bold;
+  color: black;
+  background-color: #EAECF0;
+  border: 1px solid #cccccc;
+  outline: none;
+  border-radius: 5px;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+.git_star:hover{
+  opacity: 0.8;
+}
+#star{
+  fill: black;
+}
+/*.git_star:hover #star{
+  fill: yellow;
+  filter: url(#sofGlow);
+}*/
+
+
 @media only screen and (max-width: 2200px) {
   .main_photo{
     width: 70%;
@@ -172,36 +206,3 @@ body{
       font-size: 0.75em;
   }
 }
-
-.git_star{
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 1em;
-  display: flex;
-  align-items: center;
-  column-gap: 0.5em;
-  font-size: 0.7em;
-  height: 2.5em;
-  text-wrap: nowrap;
-  padding: 0.75em;
-  font-family: Quando;
-  font-weight: bold;
-  color: black;
-  background-color: #EAECF0;
-  border: 1px solid #cccccc;
-  outline: none;
-  border-radius: 5px;
-  transition: .2s ease-in-out;
-  cursor: pointer;
-}
-.git_star:hover{
-  opacity: 0.8;
-}
-#star{
-  fill: black;
-}
-/*.git_star:hover #star{
-  fill: yellow;
-  filter: url(#sofGlow);
-}*/

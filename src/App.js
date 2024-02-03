@@ -149,7 +149,7 @@ const openGit = () => {
           <div className="gallerytext">Loading..</div>
           <div className="gallery-container">
               <span className="prev" onClick={() => changeImage(-1)}>&#10094;</span>
-              <img alt='gallery_image' id="expandedImg" />
+              <img id="expandedImg" />
               <span className="next" onClick={() => changeImage(1)}>&#10095;</span>
               <span className="close" onClick={() => closeGallery()}>&times;</span>
           </div>

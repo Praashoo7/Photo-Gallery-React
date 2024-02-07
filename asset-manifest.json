@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/Photo-Gallery-React/static/css/main.4a2e1183.css",
-    "main.js": "/Photo-Gallery-React/static/js/main.a886187c.js",
+    "main.js": "/Photo-Gallery-React/static/js/main.f81f634c.js",
     "static/js/787.0c05e198.chunk.js": "/Photo-Gallery-React/static/js/787.0c05e198.chunk.js",
-    "static/media/4.jpg": "/Photo-Gallery-React/static/media/4.03669f3a12083ce1d522.jpg",
+    "static/media/h.jpg": "/Photo-Gallery-React/static/media/h.03669f3a12083ce1d522.jpg",
     "static/media/1.jpg": "/Photo-Gallery-React/static/media/1.1985a187893a78767a2c.jpg",
     "static/media/Sea.jpg": "/Photo-Gallery-React/static/media/Sea.2351b69dbb242e752e97.jpg",
-    "static/media/h.png": "/Photo-Gallery-React/static/media/h.f840e8a8f708d7f92f8f.png",
+    "static/media/2.png": "/Photo-Gallery-React/static/media/2.f840e8a8f708d7f92f8f.png",
     "static/media/6.png": "/Photo-Gallery-React/static/media/6.3062805cacb7d2afba75.png",
     "static/media/Invalid_Image52164895.png": "/Photo-Gallery-React/static/media/Invalid_Image52164895.a8e0cec39f60a10d1ff3.png",
     "index.html": "/Photo-Gallery-React/index.html",
     "main.4a2e1183.css.map": "/Photo-Gallery-React/static/css/main.4a2e1183.css.map",
-    "main.a886187c.js.map": "/Photo-Gallery-React/static/js/main.a886187c.js.map",
+    "main.f81f634c.js.map": "/Photo-Gallery-React/static/js/main.f81f634c.js.map",
     "787.0c05e198.chunk.js.map": "/Photo-Gallery-React/static/js/787.0c05e198.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a2e1183.css",
-    "static/js/main.a886187c.js"
+    "static/js/main.f81f634c.js"
   ]
 }

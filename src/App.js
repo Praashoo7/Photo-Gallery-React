@@ -6,8 +6,6 @@ function App() {
 
   const imagesi = importAll(require.context('../public/images/', false, /\.(png|jpe?g|svg)$/));
 
-  console.log(imagesi);
-
   document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowLeft') {
       changeImage(-1);
@@ -57,22 +55,27 @@ function App() {
     const imgElement = document.getElementById('expandedImg');
     const galleryContainer = document.querySelector('.gallery-container');
     const gallerytext = document.querySelector('.gallerytext');
+    const loadingAn = document.querySelector('.loading');
   
     gallerytext.style.opacity = 1;
+    loadingAn.style.opacity = 1;
     gallerytext.textContent = 'Loading...';
 
     setTimeout(() => {
     gallerytext.style.opacity = 1;
+    loadingAn.style.opacity = 1;
 
     imgElement.onload = () => {
       galleryContainer.style.opacity = 1;
       gallerytext.style.opacity = 0;
+      loadingAn.style.opacity = 0;
     };
 
     imgElement.onerror = () => {
         imgElement.src = process.env.PUBLIC_URL + '/images/Invalid_Image52164895.png';
         galleryContainer.style.opacity = 1;
         gallerytext.style.opacity = 0;
+        loadingAn.style.opacity = 0;
       };
 
     imgElement.src = process.env.PUBLIC_URL + `/images/${imagesi[n]}`;
@@ -122,6 +125,12 @@ function App() {
 
       <div className="gallery-overlay" id="galleryOverlay">
         <div className="gallerytext">Loading..</div>
+        <div class="loading">
+            <div class="load"></div>
+            <div class="load"></div>
+            <div class="load"></div>
+            <div class="load"></div>
+          </div>
         <div className="gallery-container">
           <span className="prev" onClick={() => changeImage(-1)}>&#10094;</span>
           <img id="expandedImg" />

@@ -21,7 +21,7 @@ function App() {
   });
 
   function importAll(r) {
-    return r.keys().filter(key => key !== './Invalid_Image52164895.png').map(key => key.replace('./', '')); /*  */
+    return r.keys().filter(key => key !== './Invalid_Image52164895.png').map(key => key.replace('./', ''));
   }
 
   function openGallery() {
@@ -61,23 +61,18 @@ function App() {
     gallerytext.style.opacity = 1;
     gallerytext.textContent = 'Loading...';
 
-    // Simulate loading delay (you can adjust this timeout value)
     setTimeout(() => {
-    // Fade in loading text
     gallerytext.style.opacity = 1;
 
-    // Load image
     imgElement.onload = () => {
-      // Fade out loading text once image is loaded
       galleryContainer.style.opacity = 1;
       gallerytext.style.opacity = 0;
     };
 
-    // Set error handler to show the default image if loading fails
     imgElement.onerror = () => {
         imgElement.src = process.env.PUBLIC_URL + '/images/Invalid_Image52164895.png';
-        galleryContainer.style.opacity = 1; // Ensure the container is visible
-        gallerytext.style.opacity = 0; // Hide loading text
+        galleryContainer.style.opacity = 1;
+        gallerytext.style.opacity = 0;
       };
 
     imgElement.src = process.env.PUBLIC_URL + `/images/${imagesi[n]}`;

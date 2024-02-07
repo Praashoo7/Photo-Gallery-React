@@ -19,6 +19,10 @@ npm install
 npm start
 ```
 
+## Credits
+
+Images from [Unsplash](https://unsplash.com/)
+
 ## License
 
 Photo Gallery React App is open-source Software Licensed under the [MIT License](https://github.com/Praashoo7/Photo-Gallery-React/blob/main/LICENSE)

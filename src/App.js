@@ -1,40 +1,45 @@
 import './App.css';
 
 function App() {
+    
+  let currentIndex = 0;
 
-let currentIndex = 1;
-const totalImages = 6;
-const supportedExtensions = ['jpg', 'png', 'gif'];
+  const imagesi = importAll(require.context('../public/images/', false, /\.(png|jpe?g|svg)$/));
 
-document.addEventListener('keydown', function (event) {
+  console.log(imagesi);
+
+  document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowLeft') {
-        changeImage(-1);
+      changeImage(-1);
     } else if (event.key === 'ArrowRight') {
-        changeImage(1);
+      changeImage(1);
     } else if (event.key === 'Escape') {
-        closeGallery();
+      closeGallery();
     } else if (event.key === 'Enter') {
-        openGallery();
+      openGallery();
     }
-});
+  });
 
-function openGallery() {
+  function importAll(r) {
+    return r.keys().filter(key => key !== './Invalid_Image52164895.png').map(key => key.replace('./', '')); /*  */
+  }
+
+  function openGallery() {
     const galleryOverlay = document.getElementById('galleryOverlay');
     const galleryContainer = document.querySelector('.gallery-container');
     const main = document.querySelector('.main');
 
-    showImage(currentIndex, supportedExtensions);
+    showImage(currentIndex);
     galleryContainer.classList.add('show');
     galleryOverlay.style.display = 'flex';
     main.style.display = 'none';
 
-
     setTimeout(() => {
-        galleryContainer.style.opacity = 1;
+      galleryContainer.style.opacity = 1;
     }, 50);
-}
+  }
 
-function closeGallery() {
+  function closeGallery() {
     const galleryOverlay = document.getElementById('galleryOverlay');
     const galleryContainer = document.querySelector('.gallery-container');
     const main = document.querySelector('.main');
@@ -43,86 +48,61 @@ function closeGallery() {
     main.style.display = 'flex';
 
     setTimeout(() => {
-        galleryOverlay.style.display = 'none';
-        galleryContainer.classList.remove('show');
+      galleryOverlay.style.display = 'none';
+      galleryContainer.classList.remove('show');
     }, 300);
-}
+  }
 
-function showImage(n, extensions) {
-    if (n > totalImages) {
-        currentIndex = 1;
-    } else if (n < 1) {
-        currentIndex = totalImages;
-    }
-
+  function showImage(n) {
     const imgElement = document.getElementById('expandedImg');
     const galleryContainer = document.querySelector('.gallery-container');
     const gallerytext = document.querySelector('.gallerytext');
-    let errorOccurred = false;
-
+  
     gallerytext.style.opacity = 1;
     gallerytext.textContent = 'Loading...';
 
-    const loadNextImage = function (index) {
-        if (index >= extensions.length) {
-            if (!errorOccurred) {
-                displayErrorMessage();
-            }
-            return;
-        }
+    // Simulate loading delay (you can adjust this timeout value)
+    setTimeout(() => {
+    // Fade in loading text
+    gallerytext.style.opacity = 1;
 
-        const newImg = new Image();
-        newImg.onload = function () {
-            imgElement.src = newImg.src;
-
-            setTimeout(() => {
-                galleryContainer.style.opacity = 1;
-                setTimeout(() => {
-                    gallerytext.style.opacity = 0;
-                }, 50);
-            }, 50);
-            errorOccurred = false;
-        };
-
-        newImg.onerror = function () {
-            loadNextImage(index + 1);
-        };
-
-        newImg.src = process.env.PUBLIC_URL + `/images/${currentIndex}.${extensions[index]}`;
+    // Load image
+    imgElement.onload = () => {
+      // Fade out loading text once image is loaded
+      galleryContainer.style.opacity = 1;
+      gallerytext.style.opacity = 0;
     };
 
-    const displayErrorMessage = function () {
-        imgElement.src = process.env.PUBLIC_URL + '/images/Invalid_Image.png';
-        gallerytext.style.opacity = 0;
+    // Set error handler to show the default image if loading fails
+    imgElement.onerror = () => {
+        imgElement.src = process.env.PUBLIC_URL + '/images/Invalid_Image52164895.png';
+        galleryContainer.style.opacity = 1; // Ensure the container is visible
+        gallerytext.style.opacity = 0; // Hide loading text
+      };
 
-        setTimeout(() => {
-            galleryContainer.style.opacity = 1;
-            errorOccurred = true;
-        }, 50);
-    };
+    imgElement.src = process.env.PUBLIC_URL + `/images/${imagesi[n]}`;
+  }, 300);
+  galleryContainer.style.opacity = 0;
+  }
+  
 
-    loadNextImage(0);
+  function changeImage(n) {
+    currentIndex = (currentIndex + n + imagesi.length) % imagesi.length;
+    showImage(currentIndex);
+  }
 
-    galleryContainer.style.opacity = 0;
-}
-
-function changeImage(n) {
-    showImage(currentIndex += n, supportedExtensions);
-}
-
-const openGit = () => {
+  const openGit = () => {
     window.open('https://github.com/Praashoo7/Photo-Gallery-React', '_blank');
   };
-
 
   return (
     <div>
       <div className="main">
         <div className="main_photo" onClick={() => openGallery()}>
-            <img id="main_image" alt='main_image' src={process.env.PUBLIC_URL + '/images/1.jpg'} />
-            <span className="main_text">
-                <span>Explore</span><span>My</span><span>Photography</span>
-            </span>
+          <img id="main_image" alt='main_image' src={process.env.PUBLIC_URL + `/images/${imagesi[0]}`} />
+          <span className="main_text">
+            <span>Explore</span><span>My</span><span>Photography</span>
+          </span>
         </div>
         <button className='git_star' onClick={openGit}>Star on GitHub 
           <svg id='star' aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star mr-1" >
@@ -146,13 +126,13 @@ const openGit = () => {
       </div>
 
       <div className="gallery-overlay" id="galleryOverlay">
-          <div className="gallerytext">Loading..</div>
-          <div className="gallery-container">
-              <span className="prev" onClick={() => changeImage(-1)}>&#10094;</span>
-              <img id="expandedImg" /> 
-              <span className="next" onClick={() => changeImage(1)}>&#10095;</span>
-              <span className="close" onClick={() => closeGallery()}>&times;</span>
-          </div>
+        <div className="gallerytext">Loading..</div>
+        <div className="gallery-container">
+          <span className="prev" onClick={() => changeImage(-1)}>&#10094;</span>
+          <img id="expandedImg" />
+          <span className="next" onClick={() => changeImage(1)}>&#10095;</span>
+          <span className="close" onClick={() => closeGallery()}>&times;</span>
+        </div>
       </div>
     </div>
   );

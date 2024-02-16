@@ -123,6 +123,14 @@ function App() {
         </button>
       </div>
 
+      <div class="small_device">
+        <div class="small_device_card">
+            <div class="small_device_text">
+                I guess, We'll need some more Pixels to see these images!
+            </div>
+        </div>
+      </div>
+
       <div className="gallery-overlay" id="galleryOverlay">
         <div className="gallerytext">Loading..</div>
         <div class="loading">

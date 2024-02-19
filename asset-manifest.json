@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Photo-Gallery-React/static/css/main.c1d1046d.css",
-    "main.js": "/Photo-Gallery-React/static/js/main.6885919a.js",
+    "main.css": "/Photo-Gallery-React/static/css/main.fa64fc9d.css",
+    "main.js": "/Photo-Gallery-React/static/js/main.69f75092.js",
     "static/js/787.0c05e198.chunk.js": "/Photo-Gallery-React/static/js/787.0c05e198.chunk.js",
+    "static/media/1.jpg": "/Photo-Gallery-React/static/media/1.1985a187893a78767a2c.jpg",
     "static/media/3.jpg": "/Photo-Gallery-React/static/media/3.60e4e67c11cfc6763cb2.jpg",
-    "static/media/1.jpg": "/Photo-Gallery-React/static/media/1.fdf0b7cb12fd421cfd56.jpg",
     "static/media/2.jpg": "/Photo-Gallery-React/static/media/2.1916b2140c0b31c61584.jpg",
     "static/media/4.jpg": "/Photo-Gallery-React/static/media/4.8d3bc3c210e57c87f479.jpg",
     "static/media/h.jpg": "/Photo-Gallery-React/static/media/h.f0430ae03ff1dd45ba09.jpg",
+    "static/media/Quando-Regular.ttf": "/Photo-Gallery-React/static/media/Quando-Regular.4031628b54a63f263311.ttf",
     "index.html": "/Photo-Gallery-React/index.html",
-    "main.c1d1046d.css.map": "/Photo-Gallery-React/static/css/main.c1d1046d.css.map",
-    "main.6885919a.js.map": "/Photo-Gallery-React/static/js/main.6885919a.js.map",
+    "main.fa64fc9d.css.map": "/Photo-Gallery-React/static/css/main.fa64fc9d.css.map",
+    "main.69f75092.js.map": "/Photo-Gallery-React/static/js/main.69f75092.js.map",
     "787.0c05e198.chunk.js.map": "/Photo-Gallery-React/static/js/787.0c05e198.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1d1046d.css",
-    "static/js/main.6885919a.js"
+    "static/css/main.fa64fc9d.css",
+    "static/js/main.69f75092.js"
   ]
 }

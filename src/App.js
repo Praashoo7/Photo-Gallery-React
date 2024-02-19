@@ -19,7 +19,7 @@ function App() {
   });
 
   function importAll(r) {
-    return r.keys().filter(key => key !== './Invalid_Image52164895.png').map(key => key.replace('./', ''));
+    return r.keys().filter(key => key !== './Invalid_Image52164895.png' && key !== './1.webp').map(key => key.replace('./', ''));
   }
 
   function openGallery() {
@@ -97,18 +97,18 @@ function App() {
     <div>
       <div className="main">
         <div className="main_photo" onClick={() => openGallery()}>
-          <img id="main_image" alt='main_image' src={process.env.PUBLIC_URL + `/images/${imagesi[0]}`} />
+          <img id="main_image" alt='main_image' src={process.env.PUBLIC_URL + `/images/1.webp`} /> {/* ${imagesi[0]} */}
           <span className="main_text">
             <span>Explore</span><span>My</span><span>Photography</span>
           </span>
         </div>
         <button className='git_star' onClick={openGit}>Star on GitHub 
-          <svg id='star' aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star mr-1" >
+          <svg id='star' aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className="octicon octicon-star mr-1" >
           <defs>
               <filter id="sofGlow" height="300%" width="300%" x="-75%" y="-75%">
                 <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
                 <feGaussianBlur in="thicken" stdDeviation="7" result="blurred" />
-                <feFlood flood-color="rgb(255,255,0)" result="glowColor" />
+                <feFlood floodColor="rgb(255,255,0)" result="glowColor" />
                 <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
                 <feMerge>
                   <feMergeNode in="softGlow_colored"/>
@@ -123,9 +123,9 @@ function App() {
         </button>
       </div>
 
-      <div class="small_device">
-        <div class="small_device_card">
-            <div class="small_device_text">
+      <div className="small_device">
+        <div className="small_device_card">
+            <div className="small_device_text">
                 I guess, We'll need some more Pixels to see these images!
             </div>
         </div>
@@ -133,11 +133,11 @@ function App() {
 
       <div className="gallery-overlay" id="galleryOverlay">
         <div className="gallerytext">Loading..</div>
-        <div class="loading">
-            <div class="load"></div>
-            <div class="load"></div>
-            <div class="load"></div>
-            <div class="load"></div>
+        <div className="loading">
+            <div className="load"></div>
+            <div className="load"></div>
+            <div className="load"></div>
+            <div className="load"></div>
           </div>
         <div className="gallery-container">
           <span className="prev" onClick={() => changeImage(-1)}>&#10094;</span>

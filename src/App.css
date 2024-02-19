@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Quando;
+  src: url("../public/Font/Quando-Regular.ttf");
+  font-display: swap;
+}
+
 body{
   background-color: #fafafa;
   background-image: radial-gradient(rgba(12, 12, 12, 0.085) 2px, transparent 0);
@@ -148,7 +154,7 @@ body{
   display: flex;
   align-items: center;
   column-gap: 0.5em;
-  font-size: 0.7em;
+  font-size: 0.75em;
   height: 2.5em;
   text-wrap: nowrap;
   padding: 0.75em;

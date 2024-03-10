@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 
 function App() {
     
@@ -17,6 +18,14 @@ function App() {
       openGallery();
     }
   });
+
+
+    const [imageLoaded, setImageLoaded] = useState(false);
+  
+    const handleImageLoad = () => {
+      setImageLoaded(true);
+    };
+  
 
   function importAll(r) {
     return r.keys().filter(key => key !== './Invalid_Image52164895.png' && key !== './1.webp').map(key => key.replace('./', ''));
@@ -97,8 +106,11 @@ function App() {
     <div>
       <div className="main">
         <div className="main_photo" onClick={() => openGallery()}>
-          <img id="main_image" alt='main_image' src={process.env.PUBLIC_URL + `/images/1.webp`} /> {/* ${imagesi[0]} */}
-          <span className="main_text">
+          {!imageLoaded && (
+            <div className="skeleton-animation"></div>
+          )}
+          <img id="main_image" className={`card-image ${imageLoaded ? 'loaded' : ''}`} onLoad={handleImageLoad} alt='main_image' src={process.env.PUBLIC_URL + `/images/1.webp`} /> {/* ${imagesi[0]} */}
+          <span className={`main_text ${imageLoaded ? 'loaded' : ''}`} onLoad={handleImageLoad}>
             <span>Explore</span><span>My</span><span>Photography</span>
           </span>
         </div>

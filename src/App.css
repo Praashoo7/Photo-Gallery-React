@@ -156,15 +156,15 @@ body{
   top: 50%;
   font-size: 2em;
   color: #dbdbdb;
-  opacity: 0.25;
   cursor: pointer;
   user-select: none;
-  transition: .1s ease-in-out;
+  transition: .2s ease-in-out;
+  mix-blend-mode: difference;
 }
 .prev:hover,
 .next:hover,
 .close:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .prev {

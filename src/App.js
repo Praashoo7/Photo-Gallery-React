@@ -41,9 +41,6 @@ function App() {
     galleryOverlay.style.display = 'flex';
     main.style.display = 'none';
 
-    setTimeout(() => {
-      galleryContainer.style.opacity = 1;
-    }, 50);
   }
 
   function closeGallery() {

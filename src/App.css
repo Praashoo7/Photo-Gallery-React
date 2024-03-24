@@ -155,9 +155,16 @@ body{
   position: absolute;
   top: 50%;
   font-size: 2em;
-  color: #fff;
+  color: #dbdbdb;
+  opacity: 0.25;
   cursor: pointer;
   user-select: none;
+  transition: .1s ease-in-out;
+}
+.prev:hover,
+.next:hover,
+.close:hover {
+  opacity: 1;
 }
 
 .prev {

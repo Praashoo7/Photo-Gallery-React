@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Photo-Gallery-React/static/css/main.24e6f90d.css",
-    "main.js": "/Photo-Gallery-React/static/js/main.d8ef3b37.js",
+    "main.js": "/Photo-Gallery-React/static/js/main.fd69ac91.js",
     "static/js/787.0c05e198.chunk.js": "/Photo-Gallery-React/static/js/787.0c05e198.chunk.js",
     "static/media/1.jpg": "/Photo-Gallery-React/static/media/1.1985a187893a78767a2c.jpg",
     "static/media/3.jpg": "/Photo-Gallery-React/static/media/3.60e4e67c11cfc6763cb2.jpg",
@@ -11,11 +11,11 @@
     "static/media/Quando-Regular.ttf": "/Photo-Gallery-React/static/media/Quando-Regular.4031628b54a63f263311.ttf",
     "index.html": "/Photo-Gallery-React/index.html",
     "main.24e6f90d.css.map": "/Photo-Gallery-React/static/css/main.24e6f90d.css.map",
-    "main.d8ef3b37.js.map": "/Photo-Gallery-React/static/js/main.d8ef3b37.js.map",
+    "main.fd69ac91.js.map": "/Photo-Gallery-React/static/js/main.fd69ac91.js.map",
     "787.0c05e198.chunk.js.map": "/Photo-Gallery-React/static/js/787.0c05e198.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.24e6f90d.css",
-    "static/js/main.d8ef3b37.js"
+    "static/js/main.fd69ac91.js"
   ]
 }
